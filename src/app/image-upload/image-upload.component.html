@@ -1,0 +1,27 @@
+<!-- <div class="row">
+
+    <h1>Upload image please </h1>
+
+    <input type="file" name="file" (change)="upload($event)">
+
+    <input type="text"  name="nom" >
+
+
+</div> -->
+
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <input type="file" (change)="uploadFile($event)">
+        </div>
+
+        <div class="form-group input-group-lg">
+            <input class="form-control" placeholder="Name" formControlName="nom" name="nom">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-danger btn-block btn-lg">Create</button>
+        </div>
+    </form>
+</div>
+ 
